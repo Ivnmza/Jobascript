@@ -10,7 +10,7 @@ var db = require('../../server/db');
 
 request = request('http://localhost:8080');
 
-describe('base root tests', function() {
+xdescribe('base root tests', function() {
   it ('should respond with a 200 response code', function(done) {
     request.get('/')
     .set('accept', 'text/html')
@@ -25,9 +25,9 @@ describe('base root tests', function() {
 });
 
 
-describe('/company route tests',  function() {
-  describe('addCompany Method',   function() {
-    describe('requests with incomplete parameters', function() {
+xdescribe('/company Route Tests',  function() {
+  describe('Testing addCompany Method..',   function() {
+    describe('Requests with incomplete parameters:', function() {
       it('should send 500 status code if request is missing ::name:: property',  function() {
 
       });
@@ -41,7 +41,7 @@ describe('/company route tests',  function() {
 
       });
     });
-    describe('sending a valid addCompany request',  function() {
+    describe('Sending a valid addCompany request..',  function() {
       it('should send 200 status code', function() {
 
       });
@@ -50,7 +50,7 @@ describe('/company route tests',  function() {
       });
     });
   });
-  describe('removeCompany Method',  function () {
+  describe('Testing removeCompany Method..',  function () {
     describe('requests with incomplete parameters', function () {
       it('should send 500 status code', function () {
 
@@ -67,7 +67,7 @@ describe('/company route tests',  function() {
       });
     });
   });
-  describe('getCompanies Method', function () {
+  describe('Testing getCompanies Method..', function () {
     describe('requests with incomplete parameters', function () {
       it('should send 500 status code if request is missing query parameters', function () {
 
@@ -82,7 +82,7 @@ describe('/company route tests',  function() {
       });
     });
   });
-  describe('getCompany Method', function () {
+  describe('Testing getCompany Method..', function () {
     describe('requests with incomplete parameters', function () {
       it('should respond with a 400 status code if query type is undefined (neither id nor domain)', function () {
 
